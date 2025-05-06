@@ -28,10 +28,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     position: relative;
-    bottom: 10px;
+    bottom: 150px;
     color: #FF6700;
     justify-content: center;
     display: flex;
+    font-size: 50px;
 }
 
 /* Logo */
@@ -41,7 +42,7 @@ body {
 }
 
 .welcome-container .logo img{
-    height: 60px;
+    height: 100px;
     position: fixed;
     top: 90px;
     left: 200px;
@@ -64,15 +65,16 @@ body {
 /* Grupos de input */
 .input-group {
     padding-top: 20px;
-    margin-inline: 100px;
+    margin-inline: 175px;
 }
 
 .input-group input {
     width: 100%;
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 /* Link "Esqueceu sua senha?" */
@@ -98,22 +100,27 @@ body {
     padding: 12px;
     border: none;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 30px;
     cursor: pointer;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-signup {
     background-color: #FF6700;
     border-radius: 200px;
     padding: 15px ;
-    width: 175px;
+    width: 10vw;
+    height: 5vh;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     margin-top: 20px;
+    position: relative;
+    top: 150px;
 }
 
 
@@ -121,7 +128,7 @@ body {
 .welcome-container {
     width: 30%;
     padding: 40px;
-    background: url(imgs/Fundo1.png);
+    background: url(imgs/Fundo2.png);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;

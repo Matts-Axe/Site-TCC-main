@@ -14,8 +14,14 @@
 
         <h1 class="title">Entre na FlyEasy</h1>
 
+        <div class="google-login">
+            <button class="google-btn" id="google-login-btn">
+              <img src="imgs/google-logo.png" alt="Google"/>
+            </button>
+          </div>
+
         <div class="login-with">
-            <span>ou use seu email:</span>
+            <span>entre com seu email:</span>
         </div>
 
         <div class="input-group">
@@ -40,6 +46,46 @@
             <button class="btn btn-signup">Cadastrar-se</button>
 
     </div>
+
+    <script type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js"></script>
     
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyD22fEjlLSGUBFKwMuRKOb73qkCXy-siU8",
+        authDomain: "projeto-tcc-db505.firebaseapp.com",
+        projectId: "projeto-tcc-db505",
+        storageBucket: "projeto-tcc-db505.appspot.com",
+        messagingSenderId: "444348966791",
+        appId: "1:444348966791:web:d1282d48bbe8b3d0059522",
+        measurementId: "G-1QJXVJY5Y8"
+      };
+    
+      const app = firebase.initializeApp(firebaseConfig);
+      const analytics = firebase.getAnalytics(app);
+      const auth = firebase.getAuth(app);
+      auth.languageCode = 'pt';
+    
+      const provider = new firebase.auth.GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: 'select_account' });
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        const googleLogin = document.getElementById("google-login-btn");
+        if (googleLogin) {
+          googleLogin.addEventListener("click", () => {
+            firebase.signInWithPopup(auth, provider)
+              .then((result) => {
+                window.location.href = "Index.html";
+              })
+              .catch((error) => {
+                console.error("Erro:", error);
+                alert("Erro no login: " + error.message);
+              });
+          });
+        }
+      });
+    </script>
 </body>
 </html>

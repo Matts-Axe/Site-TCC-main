@@ -11,14 +11,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 30px 50px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 40px;
 }
 
 header img {
-    height: 60px;
+    height: 80px;
 }
 
 /* botoes de login*/
@@ -38,28 +38,29 @@ header img {
 
 .entrar {
     color: #000;
-    padding: 10px 0;
+    padding: 15px 0;
     margin-right: 10px;
 }
 
 .cadastrar {
     background-color: #FF6700;
     color: #ffff;
-    padding: 10px 7px;
+    padding: 15px 12px;
     border-radius: 10px;
 }
 
 /*menu de navegacao*/
 .menu {
     background-color: #004E98;
-    height: 45px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 15px;
 }
@@ -74,15 +75,14 @@ nav ul li a {
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    align-items: center;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /* Slider em tela inteira */
 .slider {
     margin: 0 auto;
     width: 100%;
-    height: calc(100vh - 125px); 
+    height: calc(97vh - 125px); 
     overflow: hidden;
     position: cover;
 }
